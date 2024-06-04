@@ -100,12 +100,12 @@ class MDAF(nn.Module):
         attn_122 = self.conv1_2_2(x1)
         attn_123 = self.conv1_2_3(x1)
 
-        attn_211 = self.conv2_1_1(x1)
-        attn_212 = self.conv2_1_2(x1)
-        attn_213 = self.conv2_1_3(x1)
-        attn_221 = self.conv2_2_1(x1)
-        attn_222 = self.conv2_2_2(x1)
-        attn_223 = self.conv2_2_3(x1)
+        attn_211 = self.conv2_1_1(x2)
+        attn_212 = self.conv2_1_2(x2)
+        attn_213 = self.conv2_1_3(x2)
+        attn_221 = self.conv2_2_1(x2)
+        attn_222 = self.conv2_2_2(x2)
+        attn_223 = self.conv2_2_3(x2)
 
 
         out1 = attn_111 + attn_112 + attn_113 +attn_121 + attn_122 + attn_123
