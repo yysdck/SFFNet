@@ -21,9 +21,9 @@ class SppCSPC(nn.Module):
             Bconv(ch_out,ch_out,1,1)
         )
 
-        self.mp1=nn.MaxPool2d(5,1,5//2) #卷积核为5的池化
-        self.mp2=nn.MaxPool2d(9,1,9//2) #卷积核为9的池化
-        self.mp3=nn.MaxPool2d(13,1,13//2) #卷积核为13的池化
+        self.mp1=nn.MaxPool2d(5,1,5//2) 
+        self.mp2=nn.MaxPool2d(9,1,9//2) 
+        self.mp3=nn.MaxPool2d(13,1,13//2) 
 
 
         self.conv1_2=nn.Sequential(
@@ -51,3 +51,4 @@ class SppCSPC(nn.Module):
         result2=self.conv3(x)
 
         return self.conv4(torch.cat((result1,result2),dim=1))
+
